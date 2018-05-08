@@ -2,7 +2,7 @@
   "name": "Express_REST_API",
   "version": "1.0.0",
   "description": "## Treehouse course project on creating an API using Express and Mongo DB",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "author": "Randy Layne",
   "license": "ISC",
   "dependencies": {
-  }
+    "body-parser": "^1.15.2",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "save": "^2.3.2"
+  },
+  "repository": "github:randyL78/QA_REST_API"
 }
