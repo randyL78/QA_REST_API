@@ -6,7 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["REST", "API", "Express", "MongoDB"],
+  "keywords": [
+    "REST",
+    "API",
+    "Express",
+    "MongoDB"
+  ],
   "author": "Randy Layne",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+  }
 }
