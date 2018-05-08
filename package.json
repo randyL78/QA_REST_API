@@ -1,0 +1,12 @@
+{
+  "name": "Express_REST_API",
+  "version": "1.0.0",
+  "description": "## Treehouse course project on creating an API using Express and Mongo DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["REST", "API", "Express", "MongoDB"],
+  "author": "Randy Layne",
+  "license": "ISC"
+}
