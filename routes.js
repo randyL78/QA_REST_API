@@ -5,7 +5,7 @@ const router = express.Router();
 // Route for question collection
 router.get('/', (req, res) => {
   // return all the questions
-    res.json({response: "You sent me a GET request"});
+  res.json({response: "You sent me a GET request"});
 });
 
 // Post /questions
@@ -60,7 +60,16 @@ router.delete('/:qID/answers/:aID', (req, res) => {
 // POST /questions/:qID/answers/:aID/vote-up
 // POST /questions/:qID/answers/:aID/vote-down
 // Edit a specific answer
-router.post('/:qID/answers/:aID/vote-:dir', (req, res) => {
+router.post('/:qID/answers/:aID/vote-:dir', (req, res, next) => {
+  // handle requests other than vote-up or vote-down
+  if(req.params.dir.search(/^(up|down)$/) === -1) {
+    var err = new Error("Not found");
+    err.status = 404;
+    next(err);
+  } else {
+    next();
+  }
+}, (req, res) => {
   res.json({
     response: "You sent me a POST request to /vote-" + req.params.dir,
     questionId: req.params.qID,
